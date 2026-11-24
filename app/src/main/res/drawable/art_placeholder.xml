@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rounded-square art shown when a track has no cover (and before the first update). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="104dp"
+    android:height="104dp"
+    android:viewportWidth="104"
+    android:viewportHeight="104">
+    <path android:pathData="M20,0H84A20,20 0,0 1,104 20V84A20,20 0,0 1,84 104H20A20,20 0,0 1,0 84V20A20,20 0,0 1,20 0Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="104"
+                android:endY="104"
+                android:startX="0"
+                android:startY="0"
+                android:type="linear">
+                <item android:color="#FF34445F" android:offset="0" />
+                <item android:color="#FF1B2230" android:offset="0.6" />
+                <item android:color="#FF111419" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <group
+        android:scaleX="1.6"
+        android:scaleY="1.6"
+        android:translateX="32.8"
+        android:translateY="32.8">
+        <path
+            android:fillColor="#99FFFFFF"
+            android:pathData="M12,3v10.55c-0.59,-0.34 -1.27,-0.55 -2,-0.55 -2.21,0 -4,1.79 -4,4s1.79,4 4,4 4,-1.79 4,-4V7h4V3h-6z" />
+    </group>
+</vector>

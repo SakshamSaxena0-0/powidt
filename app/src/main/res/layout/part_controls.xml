@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Full-width transport: side buttons (shuffle/repeat or -10/+10 s), previous, play (lit disc bitmap), next. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/controls"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+        <FrameLayout android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="0.5" />
+        <ImageView
+            android:id="@+id/btn_left"
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/cd_shuffle_off"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_shuffle" />
+        <FrameLayout android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/btn_prev"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/cd_prev"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_prev" />
+        <FrameLayout android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/btn_play"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:contentDescription="@string/cd_play"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_play"
+            android:background="@drawable/play_disc" />
+        <FrameLayout android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/btn_next"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/cd_next"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_next" />
+        <FrameLayout android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/btn_right"
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/cd_repeat_off"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_repeat" />
+        <FrameLayout android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="0.5" />
+</LinearLayout>

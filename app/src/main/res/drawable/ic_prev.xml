@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Thin-stroke previous: bar + hollow rounded triangle. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M5.5,5V19"
+        android:strokeWidth="1.8"
+        android:strokeColor="#CCFFFFFF"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M18.5,6.3C18.5,5.45 17.55,4.95 16.85,5.45L9.3,11.15C8.75,11.57 8.75,12.43 9.3,12.85L16.85,18.55C17.55,19.05 18.5,18.55 18.5,17.7Z"
+        android:strokeWidth="1.8"
+        android:strokeColor="#CCFFFFFF"
+        android:strokeLineJoin="round" />
+</vector>

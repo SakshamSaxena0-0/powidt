@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Frosted capsule with a hairline edge. Large radius = capsule at any text scale. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="100dp" />
+    <solid android:color="#1FFFFFFF" />
+    <stroke
+        android:width="1dp"
+        android:color="#29FFFFFF" />
+</shape>

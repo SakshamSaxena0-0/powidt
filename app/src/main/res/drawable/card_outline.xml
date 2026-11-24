@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Invisible root background that only supplies the 28dp outline used by clipToOutline. No stroke. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="@dimen/card_radius" />
+    <solid android:color="#00000000" />
+</shape>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Album art: two slots that crossfade on track change, plus the vinyl sheen that spins while playing. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/art_box"
+    android:layout_width="@dimen/art_size"
+    android:layout_height="@dimen/art_size"
+    android:contentDescription="@string/cd_open">
+
+    <ViewFlipper
+        android:id="@+id/art_flip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateFirstView="false"
+        android:inAnimation="@anim/fade_in_slow"
+        android:outAnimation="@anim/fade_out_slow">
+
+        <ImageView
+            android:id="@+id/art_a"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            android:src="@drawable/art_placeholder" />
+
+        <ImageView
+            android:id="@+id/art_b"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            android:src="@drawable/art_placeholder" />
+    </ViewFlipper>
+
+    <ProgressBar
+        android:id="@+id/vinyl_spin"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/vinyl_spin"
+        android:indeterminateDuration="5200"
+        android:indeterminateOnly="false"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:maxHeight="2000dp"
+        android:maxWidth="2000dp"
+        android:visibility="gone" />
+</FrameLayout>

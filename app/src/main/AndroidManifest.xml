@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Package visibility (Android 11+): needed to resolve Poweramp, launch it and read its album-art provider. -->
+    <queries>
+        <package android:name="com.maxmpz.audioplayer" />
+        <intent>
+            <action android:name="com.maxmpz.audioplayer.API_COMMAND" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/SetupTheme">
+
+        <activity
+            android:name=".SetupActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Per-widget styling: opened by the launcher on add (optional) and from the widget's "Settings". -->
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!-- The home-screen widget. -->
+        <receiver
+            android:name=".SparkleWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <!-- Poweramp sends these *_EXPLICIT broadcasts to manifest receivers even when this app is in the background. -->
+        <receiver
+            android:name=".PowerampEventReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.maxmpz.audioplayer.TRACK_CHANGED_EXPLICIT" />
+                <action android:name="com.maxmpz.audioplayer.STATUS_CHANGED_EXPLICIT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Internal widget actions (tap-to-seek zones, fallback progress refresh). -->
+        <receiver
+            android:name=".WidgetActionReceiver"
+            android:exported="false" />
+
+        <!--
+            Optional. Granting notification access keeps this app's process alive so the seek bar can move every
+            second. No notification content is read.
+        -->
+        <service
+            android:name=".LiveProgressService"
+            android:exported="true"
+            android:label="@string/live_service_label"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

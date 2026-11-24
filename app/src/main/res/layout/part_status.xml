@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "NOW PLAYING · 12 / 48" with bouncing equalizer bars while playing. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/status_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ProgressBar
+        android:id="@+id/eq_bars"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="6dp"
+        android:importantForAccessibility="no"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/eq_bars"
+        android:indeterminateOnly="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.1"
+        android:maxLines="1"
+        android:textColor="#FFB9CCFF"
+        android:textSize="10.5sp"
+        android:textStyle="bold" />
+</LinearLayout>

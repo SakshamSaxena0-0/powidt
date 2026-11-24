@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Card layers: background (crossfades on track change) + two drifting "breathing" lights (only while playing). -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ViewFlipper
+        android:id="@+id/card_flip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateFirstView="false"
+        android:inAnimation="@anim/fade_in_slow"
+        android:outAnimation="@anim/fade_out_slow">
+
+        <ImageView
+            android:id="@+id/card_bg_a"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            android:src="@drawable/card_glass_default" />
+
+        <ImageView
+            android:id="@+id/card_bg_b"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            android:src="@drawable/card_glass_default" />
+    </ViewFlipper>
+
+    <ProgressBar
+        android:id="@+id/aurora_a"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/aurora_a"
+        android:indeterminateOnly="false"
+        android:maxHeight="2000dp"
+        android:maxWidth="2000dp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/aurora_b"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/aurora_b"
+        android:indeterminateOnly="false"
+        android:maxHeight="2000dp"
+        android:maxWidth="2000dp"
+        android:visibility="gone" />
+</merge>

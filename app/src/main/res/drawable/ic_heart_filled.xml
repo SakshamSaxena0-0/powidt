@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rated / liked: solid white heart. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M12,19.8C11.65,19.8 11.3,19.68 11.02,19.45C7.4,16.5 3.8,13.4 3.8,9.6C3.8,7.05 5.8,5.05 8.3,5.05C9.8,5.05 11.15,5.75 12,6.95C12.85,5.75 14.2,5.05 15.7,5.05C18.2,5.05 20.2,7.05 20.2,9.6C20.2,13.4 16.6,16.5 12.98,19.45C12.7,19.68 12.35,19.8 12,19.8Z"
+        android:strokeWidth="1.6"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineJoin="round" />
+</vector>

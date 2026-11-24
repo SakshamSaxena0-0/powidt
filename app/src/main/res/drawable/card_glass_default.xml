@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fallback dark glass shown until the per-track gradient bitmap is generated. Borderless. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="@dimen/card_radius" />
+    <solid android:color="#CC121417" />
+</shape>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Thin-stroke shuffle. Drawn white; the widget sets image alpha (0x80 off / 0xFF on). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="18dp"
+    android:height="18dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M3,7H6.6C8.4,7 9.5,7.8 10.5,9.4L13.5,14.6C14.5,16.2 15.6,17 17.4,17H20.5M3,17H6.6C8.4,17 9.5,16.2 10.5,14.6L13.5,9.4C14.5,7.8 15.6,7 17.4,7H20.5"
+        android:strokeWidth="1.7"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M18,4.5L20.5,7L18,9.5M18,14.5L20.5,17L18,19.5"
+        android:strokeWidth="1.7"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

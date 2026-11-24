@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hero (tall widgets): big centered art, centered text, controls, progress, up-next queue. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_outline"
+    android:clipToOutline="true">
+
+    <include layout="@layout/part_card" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/card_padding">
+
+        <include layout="@layout/part_art" />
+
+        <include
+            layout="@layout/part_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.01"
+        android:lineSpacingMultiplier="0.95"
+        android:maxLines="2"
+        android:shadowColor="#59000000"
+        android:shadowDy="1"
+        android:shadowRadius="6"
+        android:text="@string/idle_title"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:shadowColor="#59000000"
+        android:shadowDy="1"
+        android:shadowRadius="6"
+        android:text="@string/idle_subtitle"
+        android:textColor="#99FFFFFF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/up_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="#80FFFFFF"
+        android:textSize="11.5sp"
+        android:visibility="gone" />
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="10dp" />
+
+        <include layout="@layout/part_controls" />
+
+        <include
+            layout="@layout/part_meta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" />
+
+        <include
+            layout="@layout/part_progress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/waveform_height"
+            android:layout_marginTop="8dp" />
+
+        <include
+            layout="@layout/part_times"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/queue_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="sans-serif-medium"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.14"
+            android:text="@string/up_next_header"
+            android:textColor="#80FFFFFF"
+            android:textSize="10.5sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/queue_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <!-- In-app preview only: collection adapters work on the home screen, not inside an activity. -->
+        <TextView
+            android:id="@+id/queue_static"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="1.45"
+            android:textColor="#CCFFFFFF"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/hero_tail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</FrameLayout>

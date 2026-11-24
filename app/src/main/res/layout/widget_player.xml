@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Classic: art + title column on top, big controls, quick actions, progress, times. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_outline"
+    android:clipToOutline="true">
+
+    <include layout="@layout/part_card" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/card_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <include layout="@layout/part_art" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <include layout="@layout/part_status" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.01"
+        android:lineSpacingMultiplier="0.95"
+        android:maxLines="2"
+        android:shadowColor="#59000000"
+        android:shadowDy="1"
+        android:shadowRadius="6"
+        android:text="@string/idle_title"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:shadowColor="#59000000"
+        android:shadowDy="1"
+        android:shadowRadius="6"
+        android:text="@string/idle_subtitle"
+        android:textColor="#99FFFFFF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/up_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="#80FFFFFF"
+        android:textSize="11.5sp"
+        android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:minHeight="8dp" />
+
+        <include layout="@layout/part_controls" />
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:minHeight="8dp" />
+
+        <include layout="@layout/part_meta" />
+
+        <include
+            layout="@layout/part_progress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/waveform_height"
+            android:layout_marginTop="10dp" />
+
+        <include
+            layout="@layout/part_times"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+</FrameLayout>

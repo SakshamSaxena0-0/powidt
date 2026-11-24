@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Elapsed / remaining (Chronometers while playing), and in the middle the sleep countdown or output device. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/times_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Chronometer
+        android:id="@+id/elapsed_live"
+        style="@style/WidgetTime"
+        android:layout_gravity="start|center_vertical"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/elapsed_static"
+        style="@style/WidgetTime"
+        android:layout_gravity="start|center_vertical"
+        android:text="00:00" />
+
+    <LinearLayout
+        android:id="@+id/center_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/center_icon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="5dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_out_speaker" />
+
+        <TextView
+            android:id="@+id/device_label"
+            style="@style/WidgetTime"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="150dp" />
+
+        <Chronometer
+            android:id="@+id/sleep_left"
+            style="@style/WidgetTime"
+            android:countDown="true"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <Chronometer
+        android:id="@+id/remaining_live"
+        style="@style/WidgetTime"
+        android:layout_gravity="end|center_vertical"
+        android:countDown="true"
+        android:format="-%s"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/remaining_static"
+        style="@style/WidgetTime"
+        android:layout_gravity="end|center_vertical"
+        android:text="-00:00" />
+</FrameLayout>
